@@ -1,0 +1,19 @@
+わんくま同盟 名古屋勉強会 #20 TDDワークショップのお題
+LruCacheMap（TDDBC東京1.0などでのお題を改造）
+
+■要求
+キャッシュの最大数に達した時に、もっとも使われていないデータから順に
+削除されるMapのような仕組みが欲しい。
+
+◆お題その1：Map
+クラス名：	LruCacheMap
+メソッド：	void Put(String キー, String データ) ※Java系ではput(キャメルルール)
+		String Get(String キー)
+※必要ならpublicメソッドも追加してよい。
+※LRU Cache:Last Recently Used Cache
+
+・何個でも入る
+・データにnullは入る
+・キーにnullは付加。Put()/Get()とも、「引数にnullが渡された」という例外が発生する。
+・同じキーでPut()できる。データが置き換わる。
+・Get()は、該当するデータがないときはnullを返す。
